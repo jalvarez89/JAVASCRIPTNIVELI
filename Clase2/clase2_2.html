@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clase2_2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var notaDes=prompt("Nota Desafios:");
+		var notaExa=prompt("Nota Examenes:");
+		if (notaDes==null||notaDes=="")
+			alert("Debe Escribir la Nota de Desafios");
+		else
+			if (isNaN(notaDes))
+				alert("Es una Nota Invalida");
+			else
+				if (notaDes<0||notaDes>100)
+					alert("La Nota debe estar entre 0 y 100")
+				else
+					if (notaDes>=80)
+						alert("Aprobo los Desafios");
+					else
+						alert("Reprobo los Desafios");
+		if (notaExa==null||notaExa=="")
+			alert("Debe Escribir la Nota de Examenes");
+		else
+			if (isNaN(notaExa))
+				alert("Es una Nota Invalida");
+			else
+				if (notaExa<0||notaExa>100)
+					alert("La Nota debe estar entre 0 y 100")
+				else
+					if (notaExa>=80)
+						alert("Aprobo los Examenes");
+					else
+						alert("Reprobo los Examenes");
+	</script>
+</body>
+</html>
