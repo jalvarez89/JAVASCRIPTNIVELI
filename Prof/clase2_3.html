@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+			var nombre = prompt("Nombre del cliente:");
+			var precioStr = prompt("Precio del producto:");
+			var precio = parseFloat(precioStr);
+			var cant	= parseInt(prompt("Cantidad:"));
+			if (isNaN(precio))
+				alert("Precio invalido");
+			else
+				if (isNaN(cant))
+					alert("Cantidad invalida");
+				else{
+					var subTotal = precio*cant;
+					if (cant>12)
+						descuento=subTotal*0.05;
+					else
+						descuento=0;
+					
+					subTotal -= descuento;
+					nombre = nombre.substr(0,1).toUpperCase()+
+							 nombre.substr(1).toLowerCase();
+					
+					var iva = subTotal*0.12;
+					var total = subTotal + iva;
+					alert(nombre+"\n"+
+						  "El subtotal: "+subTotal+" Bs \n"+
+						  "El Iva: "+iva+" Bs \n"+
+						  "El monto total: "+total+" Bs")
+					console.log("Precio original:",precioStr)
+					console.log("Precio numérico:",precio)
+					console.log(cant)
+					console.log(precio*cant)
+				}
+			
+		</script>
+	</body>
+</html>

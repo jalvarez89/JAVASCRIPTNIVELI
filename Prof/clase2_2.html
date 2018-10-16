@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+			var notaDes = prompt("Nota desafios:");
+			//var notaExa = prompt("Nota Examenes:");
+			
+			if (notaDes==null ||notaDes=="")
+				alert("Debe escribir la nota de desafios");
+			else
+				if (isNaN(notaDes))
+					alert("Es una nota invalida");
+				else
+					if (notaDes<0 || notaDes >100)
+						alert("La nota debe estar entre 0 y 100");
+					else
+						if (notaDes >= 80)
+							alert("Aprobo los desafios");
+						else
+							alert("Reprobo los desafios");
+		</script>
+	</body>
+</html>

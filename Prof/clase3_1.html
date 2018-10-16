@@ -1,0 +1,34 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<script>
+			const N=5;
+			mujeres=0;
+			mujeresAprobadas=0;
+			for (i=1;i<N;i++){
+				nombre=prompt("Nombre "+i+"/"+N+":");
+				esMasculino=confirm("Es masculino ?");
+				
+				if (!esMasculino)
+					mujeres++;
+					
+				nota = parseInt(prompt("Intr. la nota:"));
+				if (isNaN(nota))
+					alert("Nota invalida");
+				else
+					if (nota>=80){
+						if (!esMasculino)
+							mujeresAprobadas++;
+							
+						alert("Ud Aprobo");
+						console.log("Aprobado ",i);
+					}
+			}
+			alert("En la seccion hay "+mujeres+" mujeres\n"+
+					" y hay "+(N-mujeres)+" hombres")
+			
+		</script>
+	</body>
+</html>

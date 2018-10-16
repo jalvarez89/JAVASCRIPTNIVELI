@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practica 3</title>
+</head>
+<body onload="setInterval('is_on_line()',1000)">
+	Se va a Cerrar en 5 Segundos...
+	<script type="text/javascript">
+		function is_on_line(){
+			if (!window.navigator.onLine)
+				window.document.bgColor="red";
+			else
+				window.document.bgColor="white";
+		}
+		function verificar_internet(){
+			setInterval("is_on_line()",1000)
+		}
+		function cerrar(){
+			setTimeout("window.close()",5000);
+		}
+	</script>
+</body>
+</html>
